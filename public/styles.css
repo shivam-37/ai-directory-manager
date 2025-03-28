@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+/* Centered Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+body.dark-mode .container {
+    background: #1e1e1e;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Upload Form */
+.upload-box {
+    border: 2px dashed #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    transition: background 0.3s;
+}
+
+body.dark-mode .upload-box {
+    background: #252525;
+}
+
+.file-label {
+    display: block;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.file-label i {
+    margin-right: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background: #0056b3;
+}
+
+/* View Files Button */
+.view-files {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.view-files:hover {
+    background: #218838;
+}
+
+/* Success & Error Messages */
+.success-msg, .error-msg {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error-msg {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* File Grid */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.file-box {
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .file-box {
+    background: #252525;
+}
+
+.file-box:hover {
+    transform: translateY(-5px);
+}
+
+.file-box i {
+    font-size: 30px;
+    color: #007bff;
+}
+
+.file-box p {
+    margin-top: 5px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+/* Storage Box */
+.storage-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+body.dark-mode .storage-box {
+    background: #252525;
+}
+
+/* Storage Circle */
+.progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+}
+
+.progress-circle svg {
+    transform: rotate(-90deg);
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+}
+
+.progress-text p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-text span {
+    font-size: 12px;
+    color: #555;
+}
+
+/* File Categories */
+.file-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+body.dark-mode .category {
+    background: #333;
+}
+
+.category i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.category div {
+    display: flex;
+    flex-direction: column;
+}
+
+.category span {
+    font-size: 14px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+body.dark-mode #darkModeToggle {
+    color: #f4f4f4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .file-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
