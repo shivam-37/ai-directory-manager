@@ -24,7 +24,7 @@ Media Files: MP3, MP4, AVI, MKV, WAV
 sh
 Copy
 Edit
-git clone https://github.com/your-username/ai-directory-manager.git
+git clone https://github.com/shivam-37/ai-directory-manager.git
 cd ai-directory-manager
 2️⃣ Install Dependencies
 Ensure you have PHP 8+ installed.
